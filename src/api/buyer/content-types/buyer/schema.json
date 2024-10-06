@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buyers",
+  "info": {
+    "singularName": "buyer",
+    "pluralName": "buyers",
+    "displayName": "Buyer",
+    "description": "Create buyer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text",
+      "maxLength": 255
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "files", "videos"]
+    },
+    "type": {
+      "enum": [
+        "Individual investor",
+        "Fund",
+        "Corporate"
+      ],
+      "type": "enumeration"
+    }
+  }
+}
